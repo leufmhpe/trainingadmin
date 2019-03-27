@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -104,13 +106,54 @@
     <routinesParameter id="_IslOMFBzEemxHcW11v4cWQ" name="TalendStringUtil"/>
     <routinesParameter id="_IsiK4FBzEemxHcW11v4cWQ" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c0a3aa9d-a8d4-4242-aeb8-2742f0563b05"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7/lPhf8JJuiwZUbFpkFQSz+P3Mgq+dI/gk0A1RehubJv3qx6qB/I//xVSnTDmFn3xGiuxEmNvSTH
-CK/sL1eOLA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_42355f0e-d9d5-44cd-869a-5160df8b8b35"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>C2lR7Fnlz1Zsswt245jWudNBk3EqwvWKPSliKEGEoYvOhyLMKKzVzgMLsKSpiY1Llazrl8Oq/qv6
-/3o8ByxAiQ==</DigestValue></Reference></SignedInfo><SignatureValue>gyCCsjHGAUPvTswbcZ2xG6ya6ECBWTTI93dzdTzdr8nbRWQ9Mubb5AB0MvViCM8/9lwnCWzCMWOd
-qwEFi6L/TmExLTSqAzRWFAwW+Qjgb7d6kIjJfvF5K177q/bbJ3iZ1VizAi3NujiDqrpS6BB132aQ
-6r66MLbounbgrXBi8DteSVnLlwEbOgfbk/FOKI/IzAWdpEoSYcqHtvwYilpQCVZQ+7E4SXWO2kUb
-L+MC+yhdfX8vBpVi/vzhp10vOSHvVwMBtJkvm8KiISrMeF74UAvhWcFSHkgYB5/woVRCGERLDiNJ
-XDp7/qyiX2cyS5+W3bJn/60CMecYIlArGBq9sg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <node componentName="tFlowMeterCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeterCatcher_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowMeterCatcher_1">
+      <column defaultValue="" key="false" length="0" name="moment" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="father_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="root_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="8" name="system_pid" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="project" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job_repository_id" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job_version" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="context" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="origin" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="label" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="count" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="reference" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="thresholds" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeter_1"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" show="false" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" show="false" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowMeter_1"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeterCatcher_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowMeter_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_641ff6f3-748f-48b5-9b4a-2e2b2b5b1104"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FN9hx9Vzl6alQ3Jsxk9XQ5kkAWX9eFecQ+Icov8tSCYiR+soerQrSZthoJW/f659nSx84o1fqASi
+BmmLkH9j0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f261d686-04ea-472f-9794-6e2ef2d87cdf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gPjYODkEeqFEnuLq3we8MtvMB9yBKiphB63qJTb+V2YH3ditONJQ3/o5fEr75Kt3dvlk00f2IJFZ
+qi0d0Csb+A==</DigestValue></Reference></SignedInfo><SignatureValue>O2/HsxRRUUFhSLEyH7PwFvzVIREIBzn0MTmCcP+nV4aOLHooRQNW47Or3abLT3vs+PJSVrMN1CdR
+4fnRKz/dBxix+0vp6snj3lNlP4p6MirLvYgWvSS7UGPgZxX5iaRj4s6ubvzkKaf3O+isGBbi379b
+MkeMsfOl+LYCdWfNOknN91fXpyapqkw2poKHeYRI42pWRWFhMkle3tXzhemW8xvtAwC0YBjCCNNE
+xhkuG6zeF0NZ1ddgqKNX4NlB8VGs0iaQFKSOZ2WSSlr8deB2pMNMgaX+wtfK+VYNVK94hsEQtFUe
+b1ZkLtRsUTQ5tjSfOWa19505J/3yc0TJE7ToYg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -134,4 +177,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_42355f0e-d9d5-44cd-869a-5160df8b8b35" Target="#_c0a3aa9d-a8d4-4242-aeb8-2742f0563b05"><Timestamp>2019-03-27 09:10:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f261d686-04ea-472f-9794-6e2ef2d87cdf" Target="#_641ff6f3-748f-48b5-9b4a-2e2b2b5b1104"><Timestamp>2019-03-27 09:11:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
